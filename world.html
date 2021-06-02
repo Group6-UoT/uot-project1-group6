@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COVIINFO</title>
-    <link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
-    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header>
@@ -29,6 +27,7 @@
     </header>
 
     <main>
+        WORLD INFORMATION
         <section class="display-numbers">
             <button>Total Cases</button>
             <button>Total Recovered</button>
@@ -45,8 +44,8 @@
         </section>
         
         <section class="main-content">
-            <h2 id="provincial-heading">Provincial COVID-19 Information</h2>
-            <form id="province-form">
+            <h2 id="provincial-heading">World COVID-19 Information</h2>
+            <!-- <form id="province-form">
                 <div class="form-group">  
                     <select name="province" class="select-dropdown">
                         <option value="" disabled selected>Select a Province</option>
@@ -68,10 +67,9 @@
     
                 <div class="form-group">    
                     <button class="btn" id="save-province" type="submit">Search</button>
-                </div>
+                </div> -->
             </form>
 
-            <!-- COVID data charts -->
             <div class="charts" style="width:50rem">
                 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
                 <canvas id="myChart"></canvas>
@@ -95,6 +93,6 @@
         </section>
     </main>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/world.js"></script>
 </body>
 </html>
