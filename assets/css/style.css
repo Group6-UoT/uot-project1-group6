@@ -1,3 +1,19 @@
+select{
+    display:inline;
+}
+body{
+    background-color: rgb(248,247,247);
+}
+
+h4{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    font-size: 1rem;
+}
+
 .hero{
     display: grid;
     justify-content: center;
@@ -18,7 +34,7 @@
     display: grid;
     border: 2px solid black;
     margin-top: 20px;
-   
+    text-align: center;
 }
 
 .news{
@@ -35,6 +51,7 @@
 
 .nav-btn{
     box-shadow: none;
+    border:none;
 }
 
 #nav{
@@ -42,4 +59,8 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+#province-select{
+    padding-top: 2rem;
 }

@@ -51,7 +51,9 @@
     <div class="row">
 
         <div  class="col s12">
-            <h4 id="provincial-heading" style="text-align: center">Canada COVID-19 Information</h4>
+            <h4 id="provincial-heading">Canada COVID-19 Information</h4>
+        </div>
+        <div class="col s3" id="province-select">
                 <form id="province-form">
                     <div class="form-group">  
                         <select name="province" id="select-dropdown">
@@ -71,17 +73,20 @@
                             <option value="Yukon">Yukon</option>
                         </select>
                     </div>
-                        <div class="form-group" style="text-align:center;">    
-                            <button class="btn" id="save-province" type="submit">Search</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+                </form>
+        </div>
+
+        <div class="form-group" style="text-align:center; display:inline">    
+            <button class="btn" id="save-province" type="submit">Search</button>
+        </div>
+
+    </div>
+
 
             <div class="row" style="padding:0.5rem">
 
-            <div class="clinic col s3">
-                Vaccination Centers Near You
+            <div class="clinic col m12 l3">
+                <p>Vaccination Centers Near You</p>
                 <ul>
                     <li>
                         <a href="https://covid-19.ontario.ca/vaccine-locations" target="_blank" rel="noopener noreferrer">COVID Vaccine Locations</a>
@@ -89,14 +94,14 @@
                 </ul>
             </div>
 
-                <section class="charts col s6 map">
+                <section class="charts col m12 l6 map">
                     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
                     <canvas id="myChart"></canvas>
                 </section>
 
             <section class="useful-links">
-                <div class="col s3  news">
-                    Useful Links
+                <div class="col m12 l3  news">
+                    <p>Useful Links</p>
                     <ul>
                         <li><a href="https://travel.gc.ca/travel-covid" target="_blank" rel="noopener noreferrer">Travel, testing, quarantine and borders</a></li>
                         <li><a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/latest-travel-health-advice/exposure-flights-cruise-ships-mass-gatherings.html" target="_blank" rel="noopener noreferrer">Recent flights with potential COVID-19 exposure</a></li>
