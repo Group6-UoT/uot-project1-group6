@@ -23,8 +23,8 @@ var provincialDataE1 = document.querySelector("#provincial-data");
 var dataTypeE1 = document.querySelector(".data-type");
 
 
-provincialHeadingE1.style.display = "none";
-provinceFormE1.style.display = "none";
+// provincialHeadingE1.style.display = "none";
+// provinceFormE1.style.display = "none";
 
 dataTypeE1.addEventListener("click", function(e){
     if(e.target && e.target.nodeName == "LI") {
