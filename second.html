@@ -21,7 +21,7 @@
         </div>
         <div class="row">
             <div class="col s2"></div>
-            <div class="col s8 buttons">
+            <div class="col s8 buttons  ">
                 <a class="waves-effect white black-text btn" href="second.html">World Data</a>
                 <a class="waves-effect white black-text btn" href="third.html">Canada Data</a>
                 <a class="waves-effect white black-text btn" href="second.html">Provincial Data</a>
@@ -30,7 +30,21 @@
             <div class="col s2"></div>
         </div>
     </div>
-    
+    <div class="container">
+        
+        <div class="row red">
+                
+            <div class="col s12 butt  ">
+                        <a class="waves-effect white black-text btn">Total Cases</a>
+                        <a class="waves-effect white black-text btn">Total Recovered</a>
+                        <a class="waves-effect white black-text btn">Active Cases</a>
+                        <a class="waves-effect white black-text btn">Serious Critical</a>
+                        <a class="waves-effect white black-text btn">Serious Critical</a>
+                    </div>
+            
+            </div>
+       
+    </div>
     <div class="container">
         
             <div class="row">
@@ -71,12 +85,10 @@
 
         <nav>
             <ul class="data-type">
-                <li id="world-data">
-                    <a href="./world.html">World Data</a>
-                </li>
-                <li id="canada-data">
-                    <a href="./index.html">Canada Data</a>
-                </li>
+                <li id="world-data">World Data</li>
+                <li id="canada-data">Canada Data</li>
+                <li id="provincial-data">Provincial Data</li>
+                <li>
                     <a href="./news.html">Latest News</a>
                 </li>
             </ul>
@@ -126,11 +138,8 @@
                 </div>
             </form>
 
-            <!-- COVID data charts -->
-            <div class="charts" style="width:50rem">
-                <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
-                <canvas id="myChart"></canvas>
-                <!-- <img src="./assets/images/world-map.png" alt="placeholder for charts" width="1000" height="600"> -->
+            <div class="charts">
+                <img src="./assets/images/world-map.png" alt="placeholder for charts" width="1000" height="600">
             </div>
         </section>
 
