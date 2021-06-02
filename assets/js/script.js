@@ -32,4 +32,5 @@ dataTypeE1.addEventListener("click", function(e){
 	
 	// provincialHeadingE1.style.display = "block";
 	// provinceFormE1.style.display = "block";
+}
 });
