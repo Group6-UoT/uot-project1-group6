@@ -12,9 +12,9 @@ var getCaData = function(){
             myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Total Cases', 'Recovered', 'Active', 'Serious Critical', 'Total Deaths'],
+                    labels: ['Total Cases: '+ data.cases, 'Total Recovered: '+data.active, 'Active Cases: '+data.cases, 'Serious Critical: '+data.critical, 'Total Deaths: '+data.deaths],
                     datasets: [{
-                        label: 'Covid Data',
+                        label:null,
                         data:[data.cases, data.recovered, data.active, data.critical, data.deaths],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -38,6 +38,15 @@ var getCaData = function(){
                 },
 
                 options: {
+                    plugins:{
+                        title:{
+                            display:true,
+                            text:"COVID-19 Data"
+                        },
+                        legend:{
+                            display:false
+                        }
+                    },
                     responsive: true,
                     scales: {
 
@@ -115,9 +124,9 @@ function provinceData(province){
             myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Total Cases', 'Recovered', 'Active', 'Total Deaths'],
+                    labels: ['Total Cases: '+totalCases, 'Recovered: '+totalRecovered, 'Active: '+totalActiveCases, 'Total Deaths: '+totalDeath],
                     datasets: [{
-                        label: 'Covid Data',
+                        label:null,
                         data:[totalCases, totalRecovered, totalActiveCases, totalDeath],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -141,12 +150,21 @@ function provinceData(province){
                 },
         
                 options: {
+                    plugins:{
+                    title:{
+                        display:true,
+                        text:"COVID-19 Data"
+                    },
+                    legend:{
+                        display:false
+                    }
+                },
                     responsive: true,
                     scales: {
         
                         y: {
                             beginAtZero: true,
-                    }
+                    },
                 }
                     
            }

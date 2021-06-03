@@ -12,9 +12,9 @@ var getCoviData = function(){
             var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Total Cases', 'Total Recovered', 'Active Cases', 'Serious Critical', 'Total Deaths'],
+                    labels: ['Total Cases: '+ data.cases, 'Total Recovered: '+data.active, 'Active Cases: '+data.cases, 'Serious Critical: '+data.critical, 'Total Deaths: '+data.deaths],
                     datasets: [{
-                        label: 'Covid Data',
+                        labels:{display:false},
                         data:[data.cases, data.recovered, data.active, data.critical, data.deaths],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -38,9 +38,19 @@ var getCoviData = function(){
                 },
 
                 options: {
+
+                    plugins:{
+                        title:{
+                            display:true,
+                            text:"COVID-19 Data"
+                        },
+                        legend:{
+                            display:false
+                        }
+                    },
+                    
                     responsive: true,
                     scales: {
-
                         y: {
                             beginAtZero: true,
                     }
