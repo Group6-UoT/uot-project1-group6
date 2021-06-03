@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="container">
+    <header>
  
             <div class="row">
                 <div class="col s12 hero">
@@ -20,22 +20,17 @@
                 </div>
             </div>
 
-        <div class="row">
-            <div class="col s2"></div>
-            <div class="col s8 buttons  ">
-                <a id="world-data" class="waves-effect white black-text btn" href="world.html">World Data</a>
-                <a id="canada-data" class="waves-effect white black-text btn" href="canada.html">Canada Data</a>
-                <!-- <a class="waves-effect white black-text btn" href="second.html">Provincial Data</a> -->
-                <a class="waves-effect white black-text btn" href="news.html">Latest News</a>
+            <div class="col s12 red buttons">
+                <a id="world-data" class="waves-effect white red-text btn" href="world.html">World Data</a>
+                <a id="canada-data" class="waves-effect white red-text btn" href="canada.html">Canada Data</a>
+                <a class="waves-effect white red-text btn" href="news.html">Latest News</a>
             </div>
-            <div class="col s2"></div>
-        </div>
 
     </header>
 
     <!-- Navigation -->
     
-    <nav class="row">
+    <!-- <nav class="row">
                     
         <div class="col s12 red" id="nav">
             <a class="waves-effect white black-text btn nav-btn">Total Cases</a>
@@ -45,25 +40,21 @@
             <a class="waves-effect white black-text btn nav-btn">Total Deaths</a>
         </div>
 
-    </nav>
+    </nav> -->
 
-    <main class="row" style="padding:0.5rem">
+    <main class="row" style="padding:1rem">
 
-        <div class="clinic col m12 l3">
-                <p>Vaccination Centers Near You</p>
-            <ul>
-                <li>
-                    <a href="https://covid-19.ontario.ca/vaccine-locations" target="_blank" rel="noopener noreferrer">COVID Vaccine Locations</a>
-                </li> 
-            </ul>
+        <div  class="col s12">
+            <h4 id="provincial-heading">COVID-19 Information</h4>
+            <p>Click on the navigation bar to see latest COVID information</p>
         </div>
 
-        <div class="col m12 l6" style="margin-top:1rem">
-            <img class= "responsive-img map" src="./assets/images/world-map.png" alt="placeholder for charts"/>
+        <div class="col m12 l9 image">
+            <img class= "responsive-img map" src="https://foreignpolicy.com/wp-content/uploads/2020/03/coronavirus-map-051920-homepage.png?w=1500" alt="placeholder for charts"/>
         </div>
 
         <section class="useful-links">
-            <div class="col m12 l3  news">
+            <div class="col m12 l3  news" style="margin-top:1rem">
                 <p>Useful Links</p>
                 <ul>
                     <li><a href="https://travel.gc.ca/travel-covid" target="_blank" rel="noopener noreferrer">Travel, testing, quarantine and borders</a></li>
@@ -78,7 +69,17 @@
                 </ul>
             </div>
         </section>
+
+    <div class="clinic col m12 l3">
+            <p>Vaccination Centers Near You</p>
+        <ul>
+            <li>
+                <a href="https://covid-19.ontario.ca/vaccine-locations" target="_blank" rel="noopener noreferrer">COVID Vaccine Locations</a>
+            </li> 
+        </ul>
+    </div>
     </main>
+
 
     <script src="./assets/js/world.js"></script>
 

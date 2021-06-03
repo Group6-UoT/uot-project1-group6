@@ -17,8 +17,8 @@ p{
 .hero{
     display: grid;
     justify-content: center;
+    margin: 2rem 0;
 }
-
 
 .buttons{
     display: flex;
@@ -46,6 +46,8 @@ p{
 
 .btn{
     margin: 2rem;
+    border:none;
+    box-shadow: none;
     border:none;
 }
 

@@ -10,31 +10,26 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="container">
+    <header>
  
-            <div class="row">
-                <div class="col s12 hero">
-                    <a href = "index.html">
-                        <img class="responsive-img" src="./assets/images/logo.jpeg" alt="logo"/>
-                    </a>
-                </div>
-            </div>
-
         <div class="row">
-
-            <div class="col s12 buttons  ">
-                <a id="world-data" class="waves-effect white black-text btn" href="world.html">World Data</a>
-                <a id="canada-data" class="waves-effect white black-text btn" href="canada.html">Canada Data</a>
-                <!-- <a class="waves-effect white black-text btn" href="second.html">Provincial Data</a> -->
-                <a class="waves-effect white black-text btn" href="news.html">Latest News</a>
+            <div class="col s12 hero">
+                <a href = "index.html">
+                    <img class="responsive-img" src="./assets/images/logo.jpeg" alt="logo"/>
+                </a>
             </div>
- 
         </div>
 
-    </header>
+        <div class="col s12 red buttons">
+            <a id="world-data" class="waves-effect white red-text btn" href="world.html">World Data</a>
+            <a id="canada-data" class="waves-effect white red-text btn" href="canada.html">Canada Data</a>
+            <a class="waves-effect white red-text btn" href="news.html">Latest News</a>
+        </div>
+
+</header>
 
     <!-- Navigation -->
-    
+<!--     
     <nav class="row">
                     
         <div class="col s12 yellow" id="nav">
@@ -45,10 +40,9 @@
             <a class="waves-effect white black-text btn nav-btn">Total Deaths</a>
         </div>
 
-    </nav>
+    </nav> -->
 
-
-    <div class="row">
+    <main class="row" style="padding:1rem">
 
         <div  class="col s12">
             <h4 id="provincial-heading">Canada COVID-19 Information</h4>
@@ -85,16 +79,7 @@
 
             <div class="row" style="padding:0.5rem">
 
-            <div class="clinic col m12 l3">
-                <p>Vaccination Centers Near You</p>
-                <ul>
-                    <li>
-                        <a href="https://covid-19.ontario.ca/vaccine-locations" target="_blank" rel="noopener noreferrer">COVID Vaccine Locations</a>
-                    </li> 
-                </ul>
-            </div>
-
-                <section class="charts col m12 l6 map">
+                <section class="charts col m12 l9 map">
                     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
                     <canvas id="myChart"></canvas>
                 </section>
@@ -115,7 +100,17 @@
                     </ul>
                 </div>
             </section>
+
+            <div class="clinic col m12 l3">
+                <p>Vaccination Centers Near You</p>
+                <ul>
+                    <li>
+                        <a href="https://covid-19.ontario.ca/vaccine-locations" target="_blank" rel="noopener noreferrer">COVID Vaccine Locations</a>
+                    </li> 
+                </ul>
+            </div>
         </div>
+        </main>
 
 
     <!-- </div> -->

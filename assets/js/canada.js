@@ -1,5 +1,7 @@
 var ctx = document.getElementById('myChart');
 var canadaChart = document.getElementById('canada-data');
+var provinceChart = document.querySelector('#select-dropdown');
+var searchEl =document.querySelector('#save-province');
 
 
 var getCaData = function(){
@@ -52,4 +54,84 @@ var getCaData = function(){
 
 };
 
+function provinceData(province){
+    var provinceUrl="https://api.opencovid.ca/timeseries";
+    var totalRecovered;
+    var totalActiveCases;
+    var totalDeaths;
+    var totalCases;
+
+    fetch(provinceUrl).then(function(response){
+        response.json().then(function(data){
+
+            // Total Recovered
+            var a =data.recovered;
+            var totalRecovered=0;
+            var sumRecovered;
+            for(var i =0; i<a.length; i++){
+                // console.log(a[i].recovered);
+                if (province === a[i].province){
+                    totalRecovered = a[i].cumulative_recovered;
+                    validation=false;
+                    }
+                    sumRecovered= sumRecovered+a[i].recovered;
+            }
+            
+            console.log("recovered", totalRecovered);
+
+
+            // Active Cases
+            var b = data.active;
+            var totalActiveCases=0;
+            for(var i =0; i<b.length; i++){
+                if (province === b[i].province){
+                    totalActiveCases = b[i].active_cases;
+                }
+            }
+            console.log("active ",totalActiveCases);
+
+            var totalDeath=0;
+            var c= data.mortality;
+            for(var i =0; i<c.length; i++){
+                if (province === c[i].province){
+                    totalDeath = c[i].cumulative_deaths;
+                    }
+            }
+            console.log("death" ,totalDeath);
+
+
+            // Total cases
+            var b = data.cases;
+            var totalCases=0;
+            for(var i =0; i<b.length; i++){
+                if (province === b[i].province){
+                    totalCases = b[i].cumulative_cases;
+                }
+            }
+            console.log("active ",totalCases);
+        });
+
+    });
+};
+
 canadaChart.addEventListener("click",getCaData());
+searchEl.addEventListener("click", function(e){
+    e.preventDefault();
+    var x = document.getElementById("select-dropdown").selectedIndex;
+    var selectedProvince = document.getElementsByTagName("option")[x].value;
+
+    if(selectedProvince === "British Columbia"){
+        selectedProvince = "BC";
+    }
+    else if(selectedProvince === "Newfoundland and Labrador"){
+        selectedProvince = "NL";
+    }
+    else if(selectedProvince === "Northwest Territories"){
+        selectedProvince = "NWT";
+    }
+    else if(selectedProvince === "Prince Edward Island"){
+        selectedProvince = "PEI";
+    }
+
+    provinceData(selectedProvince);
+});

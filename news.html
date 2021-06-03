@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="container">
+    <header>
  
         <div class="row">
             <div class="col s12 hero">
@@ -20,22 +20,17 @@
             </div>
         </div>
 
-        <div class="row">
-
-            <div class="col s12 buttons  ">
-                <a id="world-data" class="waves-effect white black-text btn" href="world.html">World Data</a>
-                <a id="canada-data" class="waves-effect white black-text btn" href="canada.html">Canada Data</a>
-                <!-- <a class="waves-effect white black-text btn" href="second.html">Provincial Data</a> -->
-                <a class="waves-effect white black-text btn" href="news.html">Latest News</a>
-            </div>
-
+        <div class="col s12 red buttons">
+            <a id="world-data" class="waves-effect white red-text btn" href="world.html">World Data</a>
+            <a id="canada-data" class="waves-effect white red-text btn" href="canada.html">Canada Data</a>
+            <a class="waves-effect white red-text btn" href="news.html">Latest News</a>
         </div>
 
-    </header>
+</header>
 
     <!-- Navigation -->
     
-    <nav class="row">
+    <!-- <nav class="row">
                     
         <div class="col s12 red" id="nav">
             <a class="waves-effect white black-text btn nav-btn">Total Cases</a>
@@ -45,7 +40,9 @@
             <a class="waves-effect white black-text btn nav-btn">Total Deaths</a>
         </div>
 
-    </nav>
+    </nav> -->
+
+    <main class="row" style="padding:1rem">
 
     <div class="row">
         <div  class="col s12">
@@ -55,17 +52,8 @@
 
     <div class="row" style="padding:0.5rem">
 
-        <div class="clinic col m12 l3">
-            <p>Vaccination Centers Near You</p>
-            <ul>
-                <li>
-                    <a href="https://covid-19.ontario.ca/vaccine-locations" target="_blank" rel="noopener noreferrer">COVID Vaccine Locations</a>
-                </li> 
-            </ul>
-        </div>
-
         <!-- News Placeholder -->
-        <section class="charts col m12 l6 map">
+        <section class="charts col m12 l9 map">
             <p>ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
         </section>
 
@@ -85,7 +73,18 @@
                 </ul>
             </div>
         </section>
+
+        <div class="clinic col m12 l3 offset-l9">
+            <p>Vaccination Centers Near You</p>
+            <ul>
+                <li>
+                    <a href="https://covid-19.ontario.ca/vaccine-locations" target="_blank" rel="noopener noreferrer">COVID Vaccine Locations</a>
+                </li> 
+            </ul>
+        </div>
+
     </div>
+</main>
 
     <script src="./assets/js/world.js"></script>
 

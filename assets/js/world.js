@@ -8,13 +8,14 @@ var getCoviData = function(){
     fetch(coviUrl).then(function(response){
         response.json().then(function(data){
 
+            console.log(data.deaths);
             var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: ['Total Cases', 'Total Recovered', 'Active Cases', 'Serious Critical', 'Total Deaths'],
                     datasets: [{
                         label: 'Covid Data',
-                        data:[data.cases, data.recovered, data.active, data.deaths],
+                        data:[data.cases, data.recovered, data.active, data.critical, data.deaths],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
