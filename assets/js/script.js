@@ -19,18 +19,18 @@
 
 var provincialHeadingE1 = document.querySelector("#provincial-heading");
 var provinceFormE1 = document.querySelector("#province-form");
-var provincialDataE1 = document.querySelector("#provincial-data");
-var dataTypeE1 = document.querySelector(".data-type");
+// var provincialDataE1 = document.querySelector("#provincial-data");
+// var dataTypeE1 = document.querySelector(".data-type");
 
 
-// provincialHeadingE1.style.display = "none";
-// provinceFormE1.style.display = "none";
+// // provincialHeadingE1.style.display = "none";
+// // provinceFormE1.style.display = "none";
 
-dataTypeE1.addEventListener("click", function(e){
-    if(e.target && e.target.nodeName == "LI") {
-		console.log(e.target.id + " was clicked");
+// dataTypeE1.addEventListener("click", function(e){
+//     if(e.target && e.target.nodeName == "LI") {
+// 		console.log(e.target.id + " was clicked");
 	
-	// provincialHeadingE1.style.display = "block";
-	// provinceFormE1.style.display = "block";
-}
-});
+// 	// provincialHeadingE1.style.display = "block";
+// 	// provinceFormE1.style.display = "block";
+// }
+// });
