@@ -66,3 +66,50 @@ p{
 #province-select{
     padding-top: 2rem;
 }
+.news-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    /* box-shadow: 0 0 10px rgba(0,0,0, 0.5); */
+    border: 2px solid black; 
+    padding: 20px;   
+}
+.news-logo{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+}
+.news-section{
+    color: #00558b;
+    max-width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 10px;
+    border: 2px solid #00558b;
+    border-radius: 5px;
+}
+.news-title{
+    color: #1e2e61;
+}
+.arrow {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    transition: 0.3s;
+  }
+  
+  .arrow:hover {
+    background: #00558b;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .previous,
+  .next  {
+    background-color: transparent;
+    color: black;
+  }  
+  .round {
+    border-radius: 50%;
+  }
