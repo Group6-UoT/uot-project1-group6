@@ -9,7 +9,7 @@ var getCaData = function(){
     var coviUrl = "https://disease.sh/v3/covid-19/countries/Canada";
     fetch(coviUrl).then(function(response){
         response.json().then(function(data){
-            var myChart = new Chart(ctx, {
+            myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: ['Total Cases', 'Recovered', 'Active', 'Serious Critical', 'Total Deaths'],
@@ -48,9 +48,10 @@ var getCaData = function(){
                     
            }
         });
-    
+
           });
     });
+    
 
 };
 
@@ -58,7 +59,7 @@ function provinceData(province){
     var provinceUrl="https://api.opencovid.ca/timeseries";
     var totalRecovered;
     var totalActiveCases;
-    var totalDeaths;
+    var totalDeath;
     var totalCases;
 
     fetch(provinceUrl).then(function(response){
@@ -66,7 +67,7 @@ function provinceData(province){
 
             // Total Recovered
             var a =data.recovered;
-            var totalRecovered=0;
+            totalRecovered=0;
             var sumRecovered;
             for(var i =0; i<a.length; i++){
                 // console.log(a[i].recovered);
@@ -82,7 +83,7 @@ function provinceData(province){
 
             // Active Cases
             var b = data.active;
-            var totalActiveCases=0;
+            totalActiveCases=0;
             for(var i =0; i<b.length; i++){
                 if (province === b[i].province){
                     totalActiveCases = b[i].active_cases;
@@ -90,7 +91,7 @@ function provinceData(province){
             }
             console.log("active ",totalActiveCases);
 
-            var totalDeath=0;
+            totalDeath=0;
             var c= data.mortality;
             for(var i =0; i<c.length; i++){
                 if (province === c[i].province){
@@ -102,17 +103,66 @@ function provinceData(province){
 
             // Total cases
             var b = data.cases;
-            var totalCases=0;
+            totalCases=0;
             for(var i =0; i<b.length; i++){
                 if (province === b[i].province){
                     totalCases = b[i].cumulative_cases;
                 }
             }
             console.log("active ",totalCases);
+
+            myChart.destroy();
+            myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Total Cases', 'Recovered', 'Active', 'Total Deaths'],
+                    datasets: [{
+                        label: 'Covid Data',
+                        data:[totalCases, totalRecovered, totalActiveCases, totalDeath],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1,
+                    }]
+                
+                },
+        
+                options: {
+                    responsive: true,
+                    scales: {
+        
+                        y: {
+                            beginAtZero: true,
+                    }
+                }
+                    
+           }
+        });
         });
 
     });
+
+
+
+
 };
+
+function destroyChart(myChart){
+    myChart.destroy(ctx);
+}
 
 canadaChart.addEventListener("click",getCaData());
 searchEl.addEventListener("click", function(e){
