@@ -153,7 +153,7 @@ function provinceData(province){
                     plugins:{
                     title:{
                         display:true,
-                        text:"COVID-19 Data"
+                        text:"COVID-19 Data > " + province
                     },
                     legend:{
                         display:false
