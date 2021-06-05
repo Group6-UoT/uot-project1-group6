@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVIINFO</title>
-    <link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    <header>
- 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COVIINFO</title>
+        <link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <!-- Logo and homepage button-->
             <div class="row">
                 <div class="col s12 hero">
                     <a href = "index.html">
@@ -20,68 +20,59 @@
                 </div>
             </div>
 
+            <!-- Navigation -->
             <div class="col s12 red buttons">
                 <a id="world-data" class="waves-effect white red-text btn" href="world.html">World Data</a>
                 <a id="canada-data" class="waves-effect white red-text btn" href="canada.html">Canada Data</a>
                 <a class="waves-effect white red-text btn" href="news.html">Latest News</a>
             </div>
 
-    </header>
+        </header>
 
-    <!-- Navigation -->
-    
-    <!-- <nav class="row">
-                    
-        <div class="col s12 red" id="nav">
-            <a class="waves-effect white black-text btn nav-btn">Total Cases</a>
-            <a class="waves-effect white black-text btn nav-btn">Total Recovered</a>
-            <a class="waves-effect white black-text btn nav-btn">Active Cases</a>
-            <a class="waves-effect white black-text btn nav-btn">Serious Critical</a>
-            <a class="waves-effect white black-text btn nav-btn">Total Deaths</a>
-        </div>
 
-    </nav> -->
+        <main class="row" style="padding:1rem">
 
-    <main class="row" style="padding:1rem">
+            <div class="col s12">
+                <h4 id="provincial-heading">COVID-19 Information</h4>
+                <p>Click on the navigation bar to see latest COVID information</p>
+            </div>
 
-        <div  class="col s12">
-            <h4 id="provincial-heading">COVID-19 Information</h4>
-            <p>Click on the navigation bar to see latest COVID information</p>
-        </div>
+            <!--Homepage image-->
+            <div class="col m12 l9 image">
+                <img class= "responsive-img map" src="https://foreignpolicy.com/wp-content/uploads/2020/03/coronavirus-map-051920-homepage.png?w=1500" alt="placeholder for charts"/>
+            </div>
 
-        <div class="col m12 l9 image">
-            <img class= "responsive-img map" src="https://foreignpolicy.com/wp-content/uploads/2020/03/coronavirus-map-051920-homepage.png?w=1500" alt="placeholder for charts"/>
-        </div>
+            <!--Useful Links Section-->
+            <section class="useful-links">
+                <div class="col m12 l3  news" style="margin-top:1rem">
+                    <p>Useful Links</p>
+                    <ul>
+                        <li><a href="https://travel.gc.ca/travel-covid" target="_blank" rel="noopener noreferrer">Travel, testing, quarantine and borders</a></li>
+                        <li><a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/latest-travel-health-advice/exposure-flights-cruise-ships-mass-gatherings.html" target="_blank" rel="noopener noreferrer">Recent flights with potential COVID-19 exposure</a></li>
+                        <li><a href="https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/arrivecan.html" target="_blank" rel="noopener noreferrer">ArriveCAN</a></li>
+                        <li><a href="https://www.canada.ca/en/department-finance/economic-response-plan.html" target="_blank" rel="noopener noreferrer">Financial and economic support for individuals and businesses</a></li>
+                        <li><a href="https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-rent-subsidy.html" target="_blank" rel="noopener noreferrer">Canada Emergency Rent Subsidy (CERS)</a></li>
+                        <li><a href="https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-wage-subsidy.html" target="_blank" rel="noopener noreferrer">Canada Emergency Wage Subsidy (CEWS)</a></li>
+                        <li><a href="https://ca.thrive.health/covid19/en" target="_blank" rel="noopener noreferrer">Take a self-assessment</a></li>
+                        <li><a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/mental-health.html" target="_blank" rel="noopener noreferrer">Mental and physical wellbeing</a></li>
+                        <li><a href="https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/covid-alert.html" target="_blank" rel="noopener noreferrer">COVID Alert app</a></li>
+                    </ul>
+                </div>
+            </section>
 
-        <section class="useful-links">
-            <div class="col m12 l3  news" style="margin-top:1rem">
-                <p>Useful Links</p>
+            <!--Vaccination Centers Section-->
+            <div class="clinic col m12 l3">
+                    <p>Vaccination Centers Near You</p>
                 <ul>
-                    <li><a href="https://travel.gc.ca/travel-covid" target="_blank" rel="noopener noreferrer">Travel, testing, quarantine and borders</a></li>
-                    <li><a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/latest-travel-health-advice/exposure-flights-cruise-ships-mass-gatherings.html" target="_blank" rel="noopener noreferrer">Recent flights with potential COVID-19 exposure</a></li>
-                    <li><a href="https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/arrivecan.html" target="_blank" rel="noopener noreferrer">ArriveCAN</a></li>
-                    <li><a href="https://www.canada.ca/en/department-finance/economic-response-plan.html" target="_blank" rel="noopener noreferrer">Financial and economic support for individuals and businesses</a></li>
-                    <li><a href="https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-rent-subsidy.html" target="_blank" rel="noopener noreferrer">Canada Emergency Rent Subsidy (CERS)</a></li>
-                    <li><a href="https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-wage-subsidy.html" target="_blank" rel="noopener noreferrer">Canada Emergency Wage Subsidy (CEWS)</a></li>
-                    <li><a href="https://ca.thrive.health/covid19/en" target="_blank" rel="noopener noreferrer">Take a self-assessment</a></li>
-                    <li><a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/mental-health.html" target="_blank" rel="noopener noreferrer">Mental and physical wellbeing</a></li>
-                    <li><a href="https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/covid-alert.html" target="_blank" rel="noopener noreferrer">COVID Alert app</a></li>
+                    <li>
+                        <a href="https://covid-19.ontario.ca/vaccine-locations" target="_blank" rel="noopener noreferrer">COVID Vaccine Locations</a>
+                    </li> 
                 </ul>
             </div>
-        </section>
-
-    <div class="clinic col m12 l3">
-            <p>Vaccination Centers Near You</p>
-        <ul>
-            <li>
-                <a href="https://covid-19.ontario.ca/vaccine-locations" target="_blank" rel="noopener noreferrer">COVID Vaccine Locations</a>
-            </li> 
-        </ul>
-    </div>
-    </main>
+        </main>
 
 
-    <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/script.js"></script>
 
-</body>
+    </body>
 </html>

@@ -3,7 +3,7 @@ var canadaChart = document.getElementById('canada-data');
 var provinceChart = document.querySelector('#select-dropdown');
 var searchEl =document.querySelector('#save-province');
 
-
+//Function fetches COVID Canada wide data and displays it in a bar chart
 var getCaData = function(){
 
     var coviUrl = "https://disease.sh/v3/covid-19/countries/Canada";
@@ -17,12 +17,12 @@ var getCaData = function(){
                         label:null,
                         data:[data.cases, data.recovered, data.active, data.critical, data.deaths],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
@@ -64,6 +64,7 @@ var getCaData = function(){
 
 };
 
+//Function fetches province data based on the province the user selects and displays it in a bar chart
 function provinceData(province){
     var provinceUrl="https://api.opencovid.ca/timeseries";
     var totalRecovered;
@@ -129,12 +130,12 @@ function provinceData(province){
                         label:null,
                         data:[totalCases, totalRecovered, totalActiveCases, totalDeath],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
