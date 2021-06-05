@@ -25,11 +25,3 @@ var dataTypeE1 = document.querySelector(".data-type");
 
 provincialHeadingE1.style.display = "none";
 provinceFormE1.style.display = "none";
-
-dataTypeE1.addEventListener("click", function(e){
-    if(e.target && e.target.nodeName == "LI") {
-		console.log(e.target.id + " was clicked");
-	
-	// provincialHeadingE1.style.display = "block";
-	// provinceFormE1.style.display = "block";
-});
