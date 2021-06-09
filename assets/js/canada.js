@@ -76,40 +76,40 @@ function provinceData(province){
         response.json().then(function(data){
 
             // Total Recovered
-            var a =data.recovered;
+            var recoveredArray =data.recovered;
             totalRecovered=0;
             var sumRecovered;
-            for(var i =0; i<a.length; i++){
-                if (province === a[i].province){
-                    totalRecovered = a[i].cumulative_recovered;
+            for(var i =0; i<recoveredArray.length; i++){
+                if (province === recoveredArray[i].province){
+                    totalRecovered = recoveredArray[i].cumulative_recovered;
                     validation=false;
                     }
-                    sumRecovered= sumRecovered+a[i].recovered;
+                    sumRecovered= sumRecovered+recoveredArray[i].recovered;
             }
             // Active Cases
-            var b = data.active;
+            var activeArray = data.active;
             totalActiveCases=0;
-            for(var i =0; i<b.length; i++){
-                if (province === b[i].province){
-                    totalActiveCases = b[i].active_cases;
+            for(var i =0; i<activeArray.length; i++){
+                if (province === activeArray[i].province){
+                    totalActiveCases = activeArray[i].active_cases;
                 }
             }
 
             totalDeath=0;
-            var c= data.mortality;
-            for(var i =0; i<c.length; i++){
-                if (province === c[i].province){
-                    totalDeath = c[i].cumulative_deaths;
+            var deathArray= data.mortality;
+            for(var i =0; i<deathArray.length; i++){
+                if (province === deathArray[i].province){
+                    totalDeath = deathArray[i].cumulative_deaths;
                     }
             }
 
 
             // Total cases
-            var b = data.cases;
+            var casesArray = data.cases;
             totalCases=0;
-            for(var i =0; i<b.length; i++){
-                if (province === b[i].province){
-                    totalCases = b[i].cumulative_cases;
+            for(var i =0; i<casesArray.length; i++){
+                if (province === casesArray[i].province){
+                    totalCases = casesArray[i].cumulative_cases;
                 }
             }
 
@@ -176,10 +176,10 @@ function destroyChart(myChart){
 }
 
 canadaChart.addEventListener("click",getCaData());
-searchEl.addEventListener("click", function(e){
-    e.preventDefault();
-    var x = document.getElementById("select-dropdown").selectedIndex;
-    var selectedProvince = document.getElementsByTagName("option")[x].value;
+searchEl.addEventListener("click", function(event){
+    event.preventDefault();
+    var input = document.getElementById("select-dropdown").selectedIndex;
+    var selectedProvince = document.getElementsByTagName("option")[input].value;
 
     if(selectedProvince === "British Columbia"){
         selectedProvince = "BC";
