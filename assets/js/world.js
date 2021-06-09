@@ -9,7 +9,6 @@ var getCoviData = function(){
     fetch(coviUrl).then(function(response){
         response.json().then(function(data){
 
-            console.log(data.deaths);
             var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {

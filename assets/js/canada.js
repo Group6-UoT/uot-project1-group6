@@ -80,17 +80,12 @@ function provinceData(province){
             totalRecovered=0;
             var sumRecovered;
             for(var i =0; i<a.length; i++){
-                // console.log(a[i].recovered);
                 if (province === a[i].province){
                     totalRecovered = a[i].cumulative_recovered;
                     validation=false;
                     }
                     sumRecovered= sumRecovered+a[i].recovered;
             }
-            
-            console.log("recovered", totalRecovered);
-
-
             // Active Cases
             var b = data.active;
             totalActiveCases=0;
@@ -99,7 +94,6 @@ function provinceData(province){
                     totalActiveCases = b[i].active_cases;
                 }
             }
-            console.log("active ",totalActiveCases);
 
             totalDeath=0;
             var c= data.mortality;
@@ -108,7 +102,6 @@ function provinceData(province){
                     totalDeath = c[i].cumulative_deaths;
                     }
             }
-            console.log("death" ,totalDeath);
 
 
             // Total cases
@@ -119,7 +112,6 @@ function provinceData(province){
                     totalCases = b[i].cumulative_cases;
                 }
             }
-            console.log("active ",totalCases);
 
             myChart.destroy();
             myChart = new Chart(ctx, {

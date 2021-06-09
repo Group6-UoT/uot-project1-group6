@@ -7,11 +7,9 @@ var sec;
 var urlP;
 
 var getdata = function(){
-    console.log(displayedData);
     if(displayedData.length===1){
         location.reload(true);
     }
-    console.log(displayedData);
     displayedData.pop();
     res=displayedData[displayedData.length-1].result;
     sec = displayedData[displayedData.length-1].section;
@@ -60,7 +58,7 @@ var displayNews = function(){
             displayNews();
         }
     }).catch((error) => {
-        console.error(error);
+        return err;
       });
 }
 
