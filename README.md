@@ -1,5 +1,7 @@
 # COVIINFO
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## COVIINFO Deployed Link
 click the link below to visit the website : [COVIINFO Link](https://group6-uot.github.io/uot-project1-group6/)
 
@@ -12,6 +14,9 @@ click the link below to check the repository : [Github Repository Link](https://
     -JavaScript
     -jQuery
     -Server Side API's
+    
+>New Technology
+    
     -Chart.js
     -Material UI
 
@@ -29,5 +34,11 @@ click the link below to check the repository : [Github Repository Link](https://
 ![alt screenshot1](/assets/images/img4.png)
 ![alt screenshot1](/assets/images/img5.png)
 
+## Created By
+* [Sonali Pandey](https://github.com/sonali-pandey)
+* [Matilda Bakare](https://github.com/matildabakare)
+* [Kirti Patel](https://github.com/kirti18patel)
+* [Kruti Patel](https://github.com/krutipatel07)
+* [Sudhanshu Batra](https://github.com/sudbatra)
 
-MIT © [group6-uot]()
+© [group6-uot]()
